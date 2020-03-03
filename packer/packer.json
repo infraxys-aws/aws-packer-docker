@@ -68,9 +68,6 @@
     {
       "type": "shell",
       "inline": [
-        "ls -ltra /tmp",
-        "echo contents:",
-        "ls -ltra {{user `packer_target_dir`}}",
         "{{user `packer_target_dir`}}/provision.sh"
       ]
     }
