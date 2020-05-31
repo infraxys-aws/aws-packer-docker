@@ -1,16 +1,17 @@
 {
   "version": "1.0",
+  "id": "2235e79b-d7fa-4b8e-aceb-0b4408c37be4",
   "label": "Packer - Docker 18.06 on Ubuntu 18.04 - %ami_name_prefix%",
   "type": "PACKER_AMI",
   "autoExpand": true,
   "skipEveryInstanceFiles": false,
   "limitToAllowedChildren": false,
   "autoGenerate": false,
-  "inheritFilesFromPacketGuid": "github.com\\infraxys-aws\\aws-packer\\master\\packer helper functions",
   "key": "",
   "infoHtml": "",
   "attributes": [
     {
+      "id": "e8ed3168-075f-4006-8432-9e21d70969ef",
       "name": "ami_description",
       "caption": "AMI description",
       "type": "java.lang.String",
@@ -24,7 +25,7 @@
       "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": true,
       "cloneAttribute": true,
@@ -34,6 +35,7 @@
       "defaultValue": "Docker 18.06 on Ubuntu 18.04 AMI"
     },
     {
+      "id": "a08d1f01-8bc7-4ab9-b5d5-d98b9ac947c6",
       "name": "ami_name_prefix",
       "caption": "AMI name prefix",
       "type": "java.lang.String",
@@ -47,7 +49,7 @@
       "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": true,
       "cloneAttribute": true,
@@ -57,6 +59,7 @@
       "defaultValue": ""
     },
     {
+      "id": "266d0e74-c0d7-4cb2-ae2b-ff38cd631a11",
       "name": "associate_public_ip_address",
       "caption": "Public IP for Builder Instance",
       "type": "java.lang.Boolean",
@@ -70,7 +73,7 @@
       "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": false,
       "cloneAttribute": true,
@@ -80,6 +83,7 @@
       "defaultValue": "0"
     },
     {
+      "id": "988d95c1-05ad-4f47-8c41-02a09ebc2581",
       "name": "copy_to_aws_regions",
       "caption": "Copy to AWS regions",
       "type": "java.lang.String",
@@ -90,9 +94,10 @@
       "required": true,
       "isPartOfKey": false,
       "listOfValues": "",
+      "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": false,
       "cloneAttribute": true,
@@ -102,6 +107,7 @@
       "defaultValue": "us-east-1"
     },
     {
+      "id": "c2d7b644-e829-438e-b07c-885d546154a4",
       "name": "debug_mode",
       "caption": "Debug mode",
       "type": "java.lang.Boolean",
@@ -115,7 +121,7 @@
       "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": false,
       "cloneAttribute": true,
@@ -125,6 +131,7 @@
       "defaultValue": "0"
     },
     {
+      "id": "a01e2809-3327-445b-b39a-cf849f0b3a57",
       "name": "do_encrypt_boot",
       "caption": "Encrypt boot volume",
       "type": "java.lang.Boolean",
@@ -138,7 +145,7 @@
       "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": false,
       "cloneAttribute": true,
@@ -148,6 +155,31 @@
       "defaultValue": "0"
     },
     {
+      "id": "79285316-c485-42f8-9a3a-5f8fa68ddea6",
+      "name": "image_owners",
+      "caption": "AMI owners",
+      "type": "java.lang.String",
+      "formColumn": 1,
+      "formOrder": 1250,
+      "visibility": "ALWAYS VISIBLE",
+      "writability": "ALWAYS",
+      "required": false,
+      "isPartOfKey": false,
+      "listOfValues": "self,amazon",
+      "cacheMinutes": 0,
+      "referenceFilter": "",
+      "referenceValueAttributeName": "",
+      "referenceChildIdFilter": "",
+      "newItemsAllowed": true,
+      "parseWithVelocity": false,
+      "cloneAttribute": true,
+      "inputPrompt": "",
+      "tooltip": "\u003cp\u003eApplicable when searching the AMI by name\u003c/p\u003e\n\u003cp\u003eList of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, self (the current account), or an AWS owner alias (e.g. amazon, aws-marketplace, microsoft)\u003c/p\u003e",
+      "scope": "Instance",
+      "defaultValue": ""
+    },
+    {
+      "id": "6516b2e4-067b-4a6a-b1b5-5bbb8013ec4b",
       "name": "instance_region",
       "caption": "instance_region",
       "type": "java.lang.String",
@@ -158,9 +190,10 @@
       "required": true,
       "isPartOfKey": false,
       "listOfValues": "",
+      "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": true,
       "cloneAttribute": true,
@@ -170,6 +203,7 @@
       "defaultValue": "$instance.parent.getAttribute(\"aws_region\")"
     },
     {
+      "id": "db0c0725-bbf7-4c9d-aac4-66f500778267",
       "name": "source_ami",
       "caption": "Base AMI",
       "type": "java.lang.String",
@@ -183,7 +217,7 @@
       "cacheMinutes": 0,
       "referenceFilter": "",
       "referenceValueAttributeName": "",
-      "referenceChildGuidFilter": "",
+      "referenceChildIdFilter": "",
       "newItemsAllowed": false,
       "parseWithVelocity": false,
       "cloneAttribute": true,
