@@ -7,6 +7,13 @@
   "skipEveryInstanceFiles": false,
   "limitToAllowedChildren": false,
   "autoGenerate": false,
+  "extends": [
+    {
+      "name": "Packer helper functions",
+      "moduleBranchPath": "github.com\\infraxys-aws\\aws-packer\\master",
+      "id": "24486243-8a15-4707-a20e-3ddf035f5eb1"
+    }
+  ],
   "key": "",
   "infoHtml": "",
   "attributes": [
@@ -91,7 +98,7 @@
       "formOrder": 2300,
       "visibility": "ALWAYS VISIBLE",
       "writability": "ALWAYS",
-      "required": true,
+      "required": false,
       "isPartOfKey": false,
       "listOfValues": "",
       "cacheMinutes": 0,
@@ -219,7 +226,7 @@
       "referenceValueAttributeName": "",
       "referenceChildIdFilter": "",
       "newItemsAllowed": false,
-      "parseWithVelocity": false,
+      "parseWithVelocity": true,
       "cloneAttribute": true,
       "inputPrompt": "",
       "tooltip": "\u003ch3\u003eLeave empty if you want to use the AMI created with the parent AMI builder, if such a parent exists\u003c/h3\u003e",
